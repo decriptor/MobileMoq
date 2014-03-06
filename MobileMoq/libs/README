@@ -1,0 +1,4 @@
+To build you'll need to copy the repl/mscorlib.dll* files here.
+
+On mac:
+/Developer/MonoTouch/usr/lib/mono/2.1/repl
