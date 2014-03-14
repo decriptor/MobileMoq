@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Castle.Core", "Castle.Core\Castle.Core.csproj", "{825C8217-F8A4-46EA-B215-11A361F649E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Castle.Core.iOS", "Castle.Core.iOS\Castle.Core.iOS.csproj", "{825C8217-F8A4-46EA-B215-11A361F649E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moq", "Moq\Moq.csproj", "{73E17E0C-BC24-4BD3-9538-A8960AD37006}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moq.iOS", "Moq.iOS\Moq.iOS.csproj", "{73E17E0C-BC24-4BD3-9538-A8960AD37006}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Castle.Core.Android", "Castle.Core.Android\Castle.Core.Android.csproj", "{4516DD78-B881-4943-A4DA-C96ADF0C2133}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moq.Android", "Moq.Android\Moq.Android.csproj", "{BBFA3B6F-01D5-4B17-819B-605EC81E8A5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,6 +15,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4516DD78-B881-4943-A4DA-C96ADF0C2133}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4516DD78-B881-4943-A4DA-C96ADF0C2133}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4516DD78-B881-4943-A4DA-C96ADF0C2133}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4516DD78-B881-4943-A4DA-C96ADF0C2133}.Release|Any CPU.Build.0 = Release|Any CPU
 		{73E17E0C-BC24-4BD3-9538-A8960AD37006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{73E17E0C-BC24-4BD3-9538-A8960AD37006}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73E17E0C-BC24-4BD3-9538-A8960AD37006}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -19,8 +27,12 @@ Global
 		{825C8217-F8A4-46EA-B215-11A361F649E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{825C8217-F8A4-46EA-B215-11A361F649E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{825C8217-F8A4-46EA-B215-11A361F649E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBFA3B6F-01D5-4B17-819B-605EC81E8A5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBFA3B6F-01D5-4B17-819B-605EC81E8A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBFA3B6F-01D5-4B17-819B-605EC81E8A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBFA3B6F-01D5-4B17-819B-605EC81E8A5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Moq\Moq.csproj
+		StartupItem = Moq.iOS\Moq.iOS.csproj
 	EndGlobalSection
 EndGlobal

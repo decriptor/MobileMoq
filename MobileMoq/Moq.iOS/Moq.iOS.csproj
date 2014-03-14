@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{73E17E0C-BC24-4BD3-9538-A8960AD37006}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Moq</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Moq.iOS</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\Moq.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\iOS\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\iOS\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <DocumentationFile>bin\Release\Moq.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <MergeReferences>true</MergeReferences>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="mscorlib">
+      <HintPath>..\libs\iOS\mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Includes\" />
+    <Folder Include="Language\" />
+    <Folder Include="Linq\" />
+    <Folder Include="Matchers\" />
+    <Folder Include="Microsoft\" />
+    <Folder Include="Obsolete\" />
+    <Folder Include="Properties\" />
+    <Folder Include="Protected\" />
+    <Folder Include="Proxy\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Moq\ConditionalContext.cs">
+      <Link>ConditionalContext.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\IInterceptStrategy.cs">
+      <Link>IInterceptStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\IMock.cs">
+      <Link>IMock.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\InterceptorStrategies.cs">
+      <Link>InterceptorStrategies.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Language\ICallback.cs">
+      <Link>Language\ICallback.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Language\ICallback.Generated.cs">
+      <Link>Language\ICallback.Generated.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ICallback.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\Moq\Language\IRaise.cs">
+      <Link>Language\IRaise.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Language\IRaise.Generated.cs">
+      <Link>Language\IRaise.Generated.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IRaise.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\Moq\Language\IReturns.cs">
+      <Link>Language\IReturns.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Language\IReturns.Generated.cs">
+      <Link>Language\IReturns.Generated.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IReturns.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\Moq\Language\IReturnsExtensions.cs">
+      <Link>Language\IReturnsExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Language\ISetupSequentialResult.cs">
+      <Link>Language\ISetupSequentialResult.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Language\ISetupConditionResult.cs">
+      <Link>Language\ISetupConditionResult.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Linq\FluentMockVisitor.cs">
+      <Link>Linq\FluentMockVisitor.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Linq\Mock.cs">
+      <Link>Linq\Mock.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Linq\MockRepository.cs">
+      <Link>Linq\MockRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Linq\MockSetupsBuilder.cs">
+      <Link>Linq\MockSetupsBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Matchers\ExpressionComparer.cs">
+      <Link>Matchers\ExpressionComparer.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Matchers\ExpressionMatcher.cs">
+      <Link>Matchers\ExpressionComparer.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\MatchExpression.cs">
+      <Link>MatchExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\EmptyDefaultValueProvider.cs">
+      <Link>EmptyDefaultValueProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\ExpressionStringBuilder.cs">
+      <Link>ExpressionStringBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\MethodCall.Generated.cs">
+      <Link>MethodCall.Generated.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MethodCall.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\Moq\MethodCallReturn.Generated.cs">
+      <Link>MethodCallReturn.Generated.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MethodCallReturn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\Moq\Microsoft\Delegates.cs">
+      <Link>Microsoft\Delegates.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Delegates.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\Moq\Microsoft\ExpressionVisitor.cs">
+      <Link>Microsoft\ExpressionVisitor.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\MockExtensions.cs">
+      <Link>MockExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\MockSequence.cs">
+      <Link>MockSequence.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Obsolete\IOccurrence.cs">
+      <Link>Obsolete\IOccurrence.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\MatcherAttribute.cs">
+      <Link>MatcherAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Obsolete\Mock.Generic.Legacy.cs">
+      <Link>Obsolete\Mock.Generic.Legacy.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Obsolete\Mock.Legacy.cs">
+      <Link>Obsolete\Mock.Legacy.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Obsolete\ObsoleteMockExtensions.cs">
+      <Link>Obsolete\ObsoleteMockExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Obsolete\MockFactory.cs">
+      <Link>Obsolete\MockFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\SequenceExtensions.cs">
+      <Link>SequenceExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\SetupKind.cs">
+      <Link>SetupKind.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Language\Flow\IReturnsResult.cs">
+      <Link>Language\Flow\IReturnsResult.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\ExpressionExtensions.cs">
+      <Link>ExpressionExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Extensions.cs">
+      <Link>Extensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Evaluator.cs">
+      <Link>Evaluator.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Guard.cs">
+      <Link>Guard.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\IHideObjectMembers.cs">
+      <Link>IHideObjectMembers.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Language\IReturnsGetter.cs">
+      <Link>Language\IReturnsGetter.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Language\ICallbackGetter.cs">
+      <Link>Language\ICallbackGetter.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Language\Flow\IThrowsResult.cs">
+      <Link>Language\Flow\IThrowsResult.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Language\Flow\IReturnsThrows.cs">
+      <Link>Language\Flow\IReturnsThrows.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Language\Flow\ICallbackResult.cs">
+      <Link>Language\Flow\ICallbackResult.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\IMatcher.cs">
+      <Link>IMatcher.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\IMocked.cs">
+      <Link>IMocked.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Interceptor.cs">
+      <Link>Interceptor.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\IProxyCall.cs">
+      <Link>IProxyCall.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Language\Flow\ISetup.cs">
+      <Link>Language\Flow\ISetup.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Language\ICallbackSetter.cs">
+      <Link>Language\ICallbackSetter.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\It.cs">
+      <Link>It.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Language\IThrows.cs">
+      <Link>Language\IThrows.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Language\IVerifies.cs">
+      <Link>Language\IVerifies.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\AdvancedMatcherAttribute.cs">
+      <Link>AdvancedMatcherAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\MatcherFactory.cs">
+      <Link>MatcherFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Matchers\ConstantMatcher.cs">
+      <Link>Matchers\ConstantMatcher.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Matchers\MatcherAttributeMatcher.cs">
+      <Link>Matchers\MatcherAttributeMatcher.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Matchers\LazyEvalMatcher.cs">
+      <Link>Matchers\LazyEvalMatcher.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Matchers\PredicateMatcher.cs">
+      <Link>Matchers\PredicateMatcher.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\MethodCall.cs">
+      <Link>MethodCall.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\MethodCallReturn.cs">
+      <Link>MethodCallReturn.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Mock.cs">
+      <Link>Mock.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\MockBehavior.cs">
+      <Link>MockBehavior.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\MockException.cs">
+      <Link>MockException.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\MockRepository.cs">
+      <Link>MockRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Properties\Resources.Designer.cs">
+      <Link>Properties\Resources.Designer.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="..\Moq\Protected\IProtectedMock.cs">
+      <Link>Protected\IProtectedMock.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Protected\ItExpr.cs">
+      <Link>Protected\ItExpr.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Protected\ProtectedExtension.cs">
+      <Link>Protected\ProtectedExtension.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Protected\ProtectedMock.cs">
+      <Link>Protected\ProtectedMock.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Range.cs">
+      <Link>Range.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\Moq\Properties\Resources.resx">
+      <Link>Properties\Resources.resx</Link>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Moq\IDefaultValueProvider.xdoc">
+      <Link>IDefaultValueProvider.xdoc</Link>
+      <DependentUpon>IDefaultValueProvider.cs</DependentUpon>
+    </None>
+    <None Include="..\Moq\ilmerge.exclude">
+      <Link>ilmerge.exclude</Link>
+    </None>
+    <None Include="..\Moq\It.xdoc">
+      <Link>It.xdoc</Link>
+      <DependentUpon>It.cs</DependentUpon>
+    </None>
+    <None Include="..\Moq\Language\ICallback.tt">
+      <Link>Language\ICallback.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ICallback.Generated.cs</LastGenOutput>
+    </None>
+    <None Include="..\Moq\Language\IRaise.tt">
+      <Link>Language\IRaise.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IRaise.Generated.cs</LastGenOutput>
+    </None>
+    <None Include="..\Moq\Language\IReturns.tt">
+      <Link>Language\IReturns.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IReturns.Generated.cs</LastGenOutput>
+    </None>
+    <None Include="..\Moq\Match.xdoc">
+      <Link>Match.xdoc</Link>
+      <DependentUpon>Match.cs</DependentUpon>
+    </None>
+    <None Include="..\Moq\MethodCallReturn.tt">
+      <Link>MethodCallReturn.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MethodCallReturn.Generated.cs</LastGenOutput>
+    </None>
+    <None Include="..\Moq\Microsoft\Delegates.tt">
+      <Link>Microsoft\Delegates.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Delegates.cs</LastGenOutput>
+    </None>
+    <None Include="..\Moq\Mock.Generic.xdoc">
+      <Link>Mock.Generic.xdoc</Link>
+      <DependentUpon>Mock.Generic.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="..\Moq\Mock.xdoc">
+      <Link>Mock.xdoc</Link>
+      <DependentUpon>Mock.cs</DependentUpon>
+    </None>
+    <Compile Include="..\Moq\AsInterface.cs">
+      <Link>AsInterface.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\DefaultValue.cs">
+      <Link>DefaultValue.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\GlobalSuppressions.cs">
+      <Link>GlobalSuppressions.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\IDefaultValueProvider.cs">
+      <Link>IDefaultValueProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Linq\MockQuery.cs">
+      <Link>Linq\MockQuery.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Match.cs">
+      <Link>Match.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Matchers\Matcher.cs">
+      <Link>Matchers\Matcher.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Matchers\ParamArrayMatcher.cs">
+      <Link>Matchers\ParamArrayMatcher.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Matchers\RefMatcher.cs">
+      <Link>Matchers\RefMatcher.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\MemberInfoExtensions.cs">
+      <Link>MemberInfoExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Mock.Generic.cs">
+      <Link>Mock.Generic.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\FluentMockContext.cs">
+      <Link>FluentMockContext.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\MockDefaultValueProvider.cs">
+      <Link>MockDefaultValueProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Linq\Mocks.cs">
+      <Link>Linq\Mocks.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\PexProtector.cs">
+      <Link>PexProtector.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Proxy\ICallContext.cs">
+      <Link>Proxy\ICallContext.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Proxy\CastleProxyFactory.cs">
+      <Link>Proxy\CastleProxyFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Proxy\ICallInterceptor.cs">
+      <Link>Proxy\ICallInterceptor.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Proxy\IProxyFactory.cs">
+      <Link>Proxy\IProxyFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\SetterMethodCall.cs">
+      <Link>SetterMethodCall.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\SetupSequentialContext.cs">
+      <Link>SetupSequentialContext.cs</Link>
+    </Compile>
+    <Compile Include="..\Moq\Times.cs">
+      <Link>Times.cs</Link>
+    </Compile>
+    <None Include="..\Moq\Includes\GenericTypeParameters.tt">
+      <Link>Includes\GenericTypeParameters.tt</Link>
+    </None>
+    <None Include="..\Moq\MethodCall.tt">
+      <Link>MethodCall.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MethodCall.Generated.cs</LastGenOutput>
+    </None>
+    <None Include="..\Moq\packages.config">
+      <Link>packages.config</Link>
+    </None>
+    <None Include="..\Moq\Times.xdoc">
+      <Link>Times.xdoc</Link>
+      <DependentUpon>Times.cs</DependentUpon>
+    </None>
+    <None Include="..\Moq\Moq.snk">
+      <Link>Moq.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Castle.Core.iOS\Castle.Core.iOS.csproj">
+      <Project>{825C8217-F8A4-46EA-B215-11A361F649E0}</Project>
+      <Name>Castle.Core.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
