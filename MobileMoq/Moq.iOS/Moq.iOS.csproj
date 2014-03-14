@@ -30,10 +30,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <DocumentationFile>bin\Release\Moq.xml</DocumentationFile>
     <DebugSymbols>true</DebugSymbols>
     <MergeReferences>true</MergeReferences>
     <NoStdLib>true</NoStdLib>
+    <DocumentationFile>..\bin\iOS\Release\Moq.iOS.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

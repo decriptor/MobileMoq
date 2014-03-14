@@ -8,5 +8,5 @@ This all builds now, but can't guarantee any level of usability
 
 
 Based on (latest releases at the time):
-Castle.Core 3.2.2
-Moq4 4.2.1312
+ * Castle.Core 3.2.2
+ * Moq4 4.2.1312
