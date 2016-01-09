@@ -1,6 +1,8 @@
 MobileMoq
 =========
 
+[![Join the chat at https://gitter.im/decriptor/MobileMoq](https://badges.gitter.im/decriptor/MobileMoq.svg)](https://gitter.im/decriptor/MobileMoq?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A rebuilt version Castle.Core and Moq Xamarin Android and iOS.
 The iOS side is restricted to the simulator. I'm assuming that Android won't work with ART
 
